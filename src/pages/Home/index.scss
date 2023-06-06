@@ -1,0 +1,22 @@
+@import "../../index.scss";
+
+.home{
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.presentation{
+    padding: 30px 40px;
+    &__title{
+        font-size: 60px;
+    }
+    &__title-colored{
+        color: $primary;
+    }
+    &__paragraph{
+        color: lighten($color: $links-inactive, $amount: 15);
+        font-size: 15px;
+        width: 70%;
+        margin-top: 60px;
+    }
+}

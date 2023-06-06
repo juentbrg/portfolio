@@ -1,0 +1,37 @@
+@import "../../index.scss";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 128px 0 78px 0;
+    &__logo-container{
+        width: 60px;
+        height: 60px;
+        margin: auto;
+    }
+    &__logo{
+        object-fit: cover;
+        width: 100%;
+    }
+    &__links {
+        display: flex;
+        margin: auto;
+        padding: 33px 0 37px 0;;      
+        > *:not(:last-child) {
+          margin-right: 40px;
+        }
+    }
+    &__link{
+        color: $links-inactive;
+        transition: .3s ease-in-out;
+        &:hover{
+            color: $white;
+        }
+    }
+    &__right{
+        color: $links-inactive;
+        font-size: 14px;
+    }
+}
