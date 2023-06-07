@@ -32,15 +32,22 @@
         height: 100%;
     }
     &__info{
-        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        margin-top: 60px;
     }
     &__email{
         font-size: 22px;
         color: $primary;
     }
-    &__location-container{
+    &__phone{
+        font-size: 22px;
         margin-top: 8px;
+        text-decoration: underline;
+    }
+    &__location-container{
+        margin-top: 30px;
         height: 30px;
         display: flex;
         align-items: center;

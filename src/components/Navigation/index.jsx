@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/logo192.webp";
 
+const usePublicUrl = (file) => {
+  return new URL(file, window.location.origin).toString();
+};
+
 const Navigation = () => {
   const [activePage, setActivePage] = useState("home");
-
+  const pdfURL = usePublicUrl("/cv.pdf");
   const handleLinkClick = (page) => {
     setActivePage(page);
   };
+
   return (
     <nav className="navigation">
       <Link className="navigation__logo-container" to={"/"}>
@@ -60,13 +65,14 @@ const Navigation = () => {
           À propos
         </Link>
       </div>
-      <Link
-        to={"/contact"}
+      <a
+        href={pdfURL}
         className="navigation__contact"
-        onClick={() => handleLinkClick("contact")}
+        rel="noreferrer"
+        target="_blank"
       >
-        Me contacter
-      </Link>
+        Mon CV
+      </a>
     </nav>
   );
 };

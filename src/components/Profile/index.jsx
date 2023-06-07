@@ -4,7 +4,16 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-const Profile = ({ name, job, picture, email, location, linkedin, github }) => {
+const Profile = ({
+  name,
+  job,
+  picture,
+  email,
+  phone,
+  location,
+  linkedin,
+  github,
+}) => {
   return (
     <div className="profile">
       <div className="profile__details">
@@ -17,6 +26,9 @@ const Profile = ({ name, job, picture, email, location, linkedin, github }) => {
       <div className="profile__info">
         <a className="profile__email" href={`mailto:${email}`}>
           {email}
+        </a>
+        <a className="profile__phone" href="tel:+33782126618">
+          07.82.12.66.18
         </a>
         <div className="profile__location-container">
           <FontAwesomeIcon
