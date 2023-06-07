@@ -19,4 +19,22 @@
         width: 70%;
         margin-top: 60px;
     }
+    &__skills{
+        margin-top: 40px;
+    }
+    &__techstack{
+        margin-top: 20px;
+        display: flex;
+        >*:not(:last-child){
+            margin-right: 40px;
+        }
+    }
+    &__techlogo-container{
+        width: 64px;
+        height: 64px;
+    }
+    &__techlogo{
+        width: 100%;
+        object-fit: cover;
+    }
 }

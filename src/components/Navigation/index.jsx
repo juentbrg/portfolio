@@ -1,7 +1,7 @@
 import "./index.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "../../assets/logo192.png";
+import logo from "../../assets/logo192.webp";
 
 const Navigation = () => {
   const [activePage, setActivePage] = useState("home");
