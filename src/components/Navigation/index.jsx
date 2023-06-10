@@ -1,6 +1,6 @@
 import "./index.scss";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo192.webp";
 
 const usePublicUrl = (file) => {
@@ -9,58 +9,67 @@ const usePublicUrl = (file) => {
 
 const Navigation = () => {
   const [activePage, setActivePage] = useState("home");
+  const location = useLocation();
   const pdfURL = usePublicUrl("/cv.pdf");
-  const handleLinkClick = (page) => {
-    setActivePage(page);
-  };
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") {
+      setActivePage("home");
+    } else if (path === "/works") {
+      setActivePage("works");
+    } else if (path === "/laboratory") {
+      setActivePage("laboratory");
+    } else if (path === "/about") {
+      setActivePage("about");
+    } else {
+      setActivePage("undefined");
+    }
+  }, [location]);
 
   return (
     <nav className="navigation">
-      <Link className="navigation__logo-container" to={"/"}>
+      <Link className="navigation__logo-container" to="/">
         <img className="navigation__logo" src={logo} alt="logo julien" />
       </Link>
       <div className="navigation__links">
         <Link
-          to={"/"}
+          to="/"
           className={
             activePage === "home"
               ? "navigation__link-active"
               : "navigation__link"
           }
-          onClick={() => handleLinkClick("home")}
         >
           Accueil
         </Link>
         <Link
-          to={"/works"}
+          to="/works"
           className={
             activePage === "works"
               ? "navigation__link-active"
               : "navigation__link"
           }
-          onClick={() => handleLinkClick("works")}
         >
           Projets
         </Link>
         <Link
-          to={"/laboratory"}
+          to="/laboratory"
           className={
             activePage === "laboratory"
               ? "navigation__link-active"
               : "navigation__link"
           }
-          onClick={() => handleLinkClick("laboratory")}
         >
           Laboratoire
         </Link>
         <Link
-          to={"/about"}
+          to="/about"
           className={
             activePage === "about"
               ? "navigation__link-active"
               : "navigation__link"
           }
-          onClick={() => handleLinkClick("about")}
         >
           À propos
         </Link>

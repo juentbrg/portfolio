@@ -6,4 +6,9 @@
         font-size: 60px;
         margin-bottom: 60px;
     }
+    &__gallery{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }

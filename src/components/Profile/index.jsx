@@ -27,8 +27,8 @@ const Profile = ({
         <a className="profile__email" href={`mailto:${email}`}>
           {email}
         </a>
-        <a className="profile__phone" href="tel:+33782126618">
-          07.82.12.66.18
+        <a className="profile__phone" href={`tel:+33${phone}`}>
+          0{phone}
         </a>
         <div className="profile__location-container">
           <FontAwesomeIcon
