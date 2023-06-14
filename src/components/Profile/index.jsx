@@ -14,6 +14,9 @@ const Profile = ({
   linkedin,
   github,
 }) => {
+  const phoneNumber = "0" + JSON.stringify(phone);
+  const formattedPhone = `${phoneNumber.replace(/(\d{2})(?=\d)/g, "$1.")}`;
+
   return (
     <div className="profile">
       <div className="profile__details">
@@ -28,7 +31,7 @@ const Profile = ({
           {email}
         </a>
         <a className="profile__phone" href={`tel:+33${phone}`}>
-          0{phone}
+          {formattedPhone}
         </a>
         <div className="profile__location-container">
           <FontAwesomeIcon

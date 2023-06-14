@@ -1,6 +1,7 @@
 import "./index.scss";
 import WorksCards from "../../components/WorksCards";
 import projectList from "../../datas/projectList";
+import Footer from "../../components/Footer";
 
 const Works = () => {
   return (
@@ -15,6 +16,7 @@ const Works = () => {
           ))}
         </section>
       </main>
+      <Footer />
     </>
   );
 };

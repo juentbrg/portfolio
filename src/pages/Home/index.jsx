@@ -17,7 +17,7 @@ const Home = () => {
           picture={picture}
           email="julient.bourgeois@gmail.com"
           phone={782126618}
-          location="Nîmes, France"
+          location="Toulouse, France"
           linkedin="https://www.linkedin.com/in/julien-bourgeois-710658262/"
           github="https://github.com/juentbrg"
         />
