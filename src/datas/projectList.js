@@ -24,7 +24,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Booki",
       description:
-        "Le premier vrai projet de ma formation. Les consignes: intégrer une maquette uniquement en HTML et CSS. Pas de préprocesseur, pas de bibliothèques, pas de JavaScript.",
+        "Ce projet représente mon premier défi en tant que développeur web. Les consignes étaient claires : intégrer une maquette en utilisant uniquement HTML et CSS, sans l'aide de préprocesseurs, bibliothèques ou JavaScript. J'ai utilisé des techniques de positionnement CSS avancées, telles que Flexbox et Grid, pour structurer la maquette de manière efficace. Malgré l'absence de fonctionnalités interactives, j'ai créé une expérience utilisateur esthétiquement plaisante et responsive.",
       cover: booki,
       githubLink: "https://github.com/juentbrg/Booki",
       type: "HTML/CSS",
@@ -34,7 +34,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Ohmyfood",
       description:
-        "Une occasion de consolider ses connaissances en HTML et SCSS uniquement, SCSS étant aux choix. Un projet avec comme contrainte l'obligation de le développer en mobile-first, et en y intégrant des animations css.",
+        "Ce projet m'a permis de consolider mes connaissances en HTML et SCSS en me concentrant sur une approche mobile-first. J'ai intégré des animations CSS pour ajouter une dimension visuelle et interactive à l'interface. Cela m'a offert une expérience précieuse dans la conception responsive et les techniques d'animation CSS. Ce projet a renforcé ma maîtrise du développement web et m'a préparé pour des projets plus avancés.",
       cover: ohmyfood,
       githubLink: "https://github.com/juentbrg/Ohmyfood",
       type: "HTML/CSS",
@@ -44,7 +44,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Print it",
       description:
-        "Mon premier projet en JavaScript vanilla assez simpliste. Le html et le css est déjà fourni.",
+        "Mon premier projet en JavaScript vanilla consistait à créer un carrousel en utilisant le HTML et le CSS déjà fournis. J'ai réussi à mettre en place la logique nécessaire pour permettre une navigation fluide entre les éléments du carrousel. Ce projet m'a donné une première expérience pratique en JavaScript et renforcé ma compréhension des concepts fondamentaux.",
       cover: printit,
       githubLink: "https://github.com/juentbrg/PrintIt",
       type: "JavaScript",
@@ -54,7 +54,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Portfolio Architecte",
       description:
-        "Premier projet sérieux en JavaScript vanilla. J'y ai appris la gestion des appels ajax. Le backend, le html et le css sont fournis, des modifications sont tout de même attendues sur html et css.",
+        "Mon premier projet sérieux en JavaScript vanilla m'a permis d'apprendre la gestion des appels AJAX. J'ai effectué des modifications sur le HTML et le CSS fournis pour répondre aux exigences du projet. Ce projet m'a offert une expérience précieuse dans la manipulation dynamique des données et m'a permis de renforcer mes compétences en développement web.",
       cover: portfolioArchitecte,
       githubLink:
         "https://github.com/juentbrg/Portfolio-architecte-sophie-bluel",
@@ -65,7 +65,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Kasa",
       description:
-        "Mes premiers pas sur la bibliothèque React. Ce projet m'a permis de comprendre l'architecture et la logique React, une maquette m'a été donnée pour ce projet.",
+        "Ce projet m'a permis d'acquérir une compréhension approfondie des concepts fondamentaux de React tels que les composants, les états et les props. J'ai mis en place la structure du projet en suivant les principes de modularité et de réutilisabilité propres à React.",
       cover: kasa,
       githubLink: "https://github.com/juentbrg/kasa",
       type: "React",
@@ -75,7 +75,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Nina Carducci",
       description:
-        "Un projet pour travailler le référencement, un code m'est fourni, je dois dans un premier temps corriger quelques éléments pour obtenir un rapport correct sur lighthouse, puis, je travaille le référencement local.",
+        "Ce projet m'a permis de travailler sur l'optimisation SEO en corrigeant certains éléments du code pour obtenir un rapport Lighthouse satisfaisant. J'ai ensuite concentré mes efforts sur le référencement local, en utilisant des techniques spécifiques pour augmenter la visibilité du site dans les recherches locales.",
       cover: ninaCarducci,
       githubLink: "https://github.com/juentbrg/ninacarducci",
       type: "SEO",
@@ -85,7 +85,7 @@ const projectList = {
       id: (id++).toString(),
       title: "724 events",
       description:
-        "On me donne un code React contenant des bugs d'intégration. J'ai du les trouver et les corriger en mettant en place une stratégie.",
+        "Dans ce projet, j'ai identifié et corrigé les bugs d'intégration présents dans un code React. J'ai mis en place une stratégie méthodique pour résoudre efficacement ces problèmes, renforçant ainsi mes compétences en débogage et en intégration React.",
       cover: event,
       githubLink: "https://github.com/juentbrg/724events",
       type: "Debug",
@@ -95,7 +95,7 @@ const projectList = {
       id: (id++).toString(),
       title: "Argent Bank",
       description:
-        "Argent bank est le projet le plus complet de ma formation, a mon sens. Initialement, il doit être codé avec react et redux, j'y ai ajouté typescript que je souhaitais aborder depuis longtemps.",
+        " Argent Bank représente le projet le plus complet de ma formation. Initialement développé avec React et Redux, j'ai saisi l'opportunité d'ajouter TypeScript, une technologie que je souhaitais aborder depuis longtemps. Cette combinaison de technologies m'a permis de créer une application robuste et maintenable, renforçant mes compétences dans le développement web moderne.",
       cover: argentBank,
       githubLink: "https://github.com/juentbrg/ArgentBank-website",
       type: "React/Redux",
@@ -107,7 +107,7 @@ const projectList = {
       id: (id++).toString(),
       title: "To-do list Vue",
       description:
-        "Un de mes nombreux projets personnel pour comprendre les bases de VueJS 3.",
+        "Ce projet personnel m'a permis de comprendre les bases de Vue.js 3. En explorant cette technologie, j'ai consolidé mes connaissances et acquis une compréhension solide de son fonctionnement. Ce projet représente une étape importante dans mon apprentissage de Vue.js 3.",
       cover: todoListVue,
       githubLink: "https://github.com/juentbrg/todolist.vueJS3",
       type: "VueJS",
