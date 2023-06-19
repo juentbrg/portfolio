@@ -10,7 +10,6 @@ const Projects = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const isLabPage = searchParams.get("isLabPage") === "true";
-  console.log(searchParams);
 
   let projectsList = null;
   if (isLabPage) {

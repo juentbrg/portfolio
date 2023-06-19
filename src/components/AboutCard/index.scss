@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.aboutCard{
+    &__wrapper{
+    display: flex;
+    flex-direction: row;
+    }
+    &__picture-border{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
+        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+        width: 370px;
+        height: 370px;
+        border-radius: 30px;
+    }
+    &__picture-container{
+        width: 320px;
+        height: 320px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    &__picture{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    &__content{
+        flex: 1;
+        height: 370px;
+        margin-left: 20px;
+    }
+    &__title{
+        text-align: center;
+        font-size: 60px;
+        margin: 2px 0 8px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: calc(100% - 91px);
+        padding: 30px;
+        border-radius: 30px;
+        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
+        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+    }
+    &__fullName{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    &__description{
+        color: lighten($color: $links-inactive, $amount: 20);
+    }
+    &__more{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    &__following, &__degree{
+        flex: 1;
+        padding: 30px;
+        border-radius: 30px;
+        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
+        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+    &__following-title, &__degree-title{
+        margin-bottom: 10px;
+    }
+    &__following-description{
+        color: lighten($color: $links-inactive, $amount: 20);
+    }
+    &__degree-info{
+        > *:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+    &__degree-date{
+        color: $links-inactive;
+        font-weight: 500;
+    }
+    &__degree-school{
+        color: $links-inactive;
+    }
+}
