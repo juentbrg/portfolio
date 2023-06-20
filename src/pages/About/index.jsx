@@ -1,4 +1,5 @@
 import "./index.scss";
+import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import AboutCard from "../../components/AboutCard";
 import pic from "../../assets/pic.webp";
@@ -6,6 +7,7 @@ import pic from "../../assets/pic.webp";
 const About = () => {
   return (
     <>
+      <Navigation />
       <main className="about">
         <AboutCard
           picture={pic}

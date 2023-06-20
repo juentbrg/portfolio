@@ -1,4 +1,5 @@
 import "./index.scss";
+import Navigation from "../../components/Navigation";
 import WorksCards from "../../components/WorksCards";
 import projectList from "../../datas/projectList";
 import Footer from "../../components/Footer";
@@ -6,6 +7,7 @@ import Footer from "../../components/Footer";
 const Works = () => {
   return (
     <>
+      <Navigation />
       <main className="works">
         <h1 className="works__title">Projets OpenClassrooms</h1>
         <section className="works__gallery">

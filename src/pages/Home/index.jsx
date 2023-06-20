@@ -1,4 +1,5 @@
 import "./index.scss";
+import Navigation from "../../components/Navigation";
 import Profile from "../../components/Profile";
 import picture from "../../assets/pic.webp";
 import Footer from "../../components/Footer";
@@ -10,6 +11,7 @@ import sassLogo from "../../assets/sass.webp";
 const Home = () => {
   return (
     <>
+      <Navigation />
       <main className="home">
         <Profile
           name="Julien"

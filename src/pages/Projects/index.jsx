@@ -1,4 +1,5 @@
 import "./index.scss";
+import Navigation from "../../components/Navigation";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -28,6 +29,7 @@ const Projects = () => {
 
   return (
     <>
+      <Navigation />
       <main className="projects">
         <div className="projects__image-container">
           <img

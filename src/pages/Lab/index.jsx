@@ -1,4 +1,5 @@
 import "./index.scss";
+import Navigation from "../../components/Navigation";
 import WorksCards from "../../components/WorksCards";
 import projectList from "../../datas/projectList";
 import Footer from "../../components/Footer";
@@ -6,6 +7,7 @@ import Footer from "../../components/Footer";
 const Lab = () => {
   return (
     <>
+      <Navigation />
       <main className="lab">
         <h1 className="lab__title">Projets personnels</h1>
         <section className="lab__gallery">
