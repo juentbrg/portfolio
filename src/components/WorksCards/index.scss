@@ -64,6 +64,9 @@
   .workscards {
     width: calc(100vw - 40px);
     height: 302px;
+    &__title {
+      font-size: 20px;
+    }
     &__cover-container {
       height: 200px;
     }

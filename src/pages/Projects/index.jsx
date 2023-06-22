@@ -42,7 +42,7 @@ const Projects = () => {
           <h1 className="projects__title">{projects.title}</h1>
           <div className="projects__content-wrapper">
             <div className="projects__tech projects__container">
-              <h2 className="projects__tech-title">Technologies</h2>
+              <h2 className="projects__tech-title">Tech</h2>
               <div className="projects__techImage-wrapper">
                 {projects.technologies.map((technology, index) => (
                   <div key={index} className="projects__techImage-container">
