@@ -1,38 +1,62 @@
 @import "../../index.scss";
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 128px 0 78px 0;
+  &__logo-container {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+  }
+  &__logo {
+    object-fit: cover;
     width: 100%;
-    padding: 128px 0 78px 0;
-    &__logo-container{
-        width: 60px;
-        height: 60px;
-        margin: auto;
+    height: 100%;
+  }
+  &__links {
+    display: flex;
+    margin: auto;
+    padding: 33px 0 37px 0;
+    > *:not(:last-child) {
+      margin-right: 40px;
     }
-    &__logo{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+  }
+  &__link {
+    color: $links-inactive;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__right {
+    color: $links-inactive;
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .footer {
+    padding: 80px 0 40px 0;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .footer {
+    padding: 50px 0 30px 0;
+    &__logo-container {
+      width: 50px;
+      height: 50px;
     }
     &__links {
-        display: flex;
-        margin: auto;
-        padding: 33px 0 37px 0;;      
-        > *:not(:last-child) {
-          margin-right: 40px;
-        }
+      > *:not(:last-child) {
+        margin-right: 20px;
+      }
     }
-    &__link{
-        color: $links-inactive;
-        transition: .3s ease-in-out;
-        &:hover{
-            color: $white;
-        }
+    &__link {
+      font-size: 14px;
     }
-    &__right{
-        color: $links-inactive;
-        font-size: 14px;
-    }
+  }
 }

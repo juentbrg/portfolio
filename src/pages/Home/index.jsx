@@ -38,7 +38,7 @@ const Home = () => {
             vos idées.
           </p>
           <div className="presentation__skills">
-            <h2 className="presentations__skills-title">Stack Technique</h2>
+            <h2 className="presentation__skills-title">Stack Technique</h2>
             <div className="presentation__techstack">
               <div className="presentation__techlogo-container">
                 <img

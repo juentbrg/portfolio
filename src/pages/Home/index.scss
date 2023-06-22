@@ -2,6 +2,7 @@
 
 .home {
   display: flex;
+  flex-direction: row;
 }
 
 .presentation {
@@ -42,6 +43,54 @@
     &:hover {
       opacity: 100%;
       filter: none;
+    }
+  }
+}
+
+@media all and (max-width: 850px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+  .presentation {
+    padding: 0 20px;
+    margin-bottom: 40px;
+    &__title {
+      font-size: 50px;
+    }
+    &__paragraph {
+      width: 100%;
+      margin-top: 20px;
+      text-align: justify;
+    }
+    &__techlogo-container {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .presentation {
+    padding: 0 20px;
+    &__title {
+      font-size: 35px;
+      text-align: center;
+    }
+    &__paragraph {
+      margin-top: 30px;
+    }
+    &__skills {
+      text-align: center;
+    }
+    &__skills-title {
+      font-size: 22px;
+    }
+    &__techstack {
+      justify-content: center;
+    }
+    &__techlogo-container {
+      width: 40px;
+      height: 40px;
     }
   }
 }
