@@ -2,6 +2,9 @@ import "./index.scss";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo192.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const usePublicUrl = (file) => {
   return new URL(file, window.location.origin).toString();
@@ -9,8 +12,18 @@ const usePublicUrl = (file) => {
 
 const Navigation = () => {
   const [activePage, setActivePage] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
   const pdfURL = usePublicUrl("/cv.pdf");
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   useEffect(() => {
     const path = location.pathname;
@@ -27,12 +40,23 @@ const Navigation = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <nav className="navigation">
       <Link className="navigation__logo-container" to="/">
         <img className="navigation__logo" src={logo} alt="logo julien" />
       </Link>
-      <div className="navigation__links">
+      <div
+        className={`navigation__links ${
+          isMenuOpen ? "navigation__links-visible" : ""
+        }`}
+      >
         <Link
           to="/"
           className={
@@ -73,15 +97,36 @@ const Navigation = () => {
         >
           À propos
         </Link>
+        {windowWidth < 850 && (
+          <a
+            href={pdfURL}
+            className="navigation__contact"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Mon CV
+          </a>
+        )}
       </div>
-      <a
-        href={pdfURL}
-        className="navigation__contact"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Mon CV
-      </a>
+      {windowWidth >= 850 && (
+        <a
+          href={pdfURL}
+          className="navigation__contact"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Mon CV
+        </a>
+      )}
+      {windowWidth < 850 && (
+        <FontAwesomeIcon
+          icon={isMenuOpen ? faXmark : faBars}
+          size="2xl"
+          style={{ color: "#f5f5f5" }}
+          className="navigation__menu-icon"
+          onClick={handleMenuToggle}
+        />
+      )}
     </nav>
   );
 };

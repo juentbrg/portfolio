@@ -1,46 +1,47 @@
 @import "../../index.scss";
 
-.home{
-    display: flex;
+.home {
+  display: flex;
 }
 
-.presentation{
-    padding: 60px 40px;
-    &__title{
-        font-size: 60px;
+.presentation {
+  padding: 60px 40px;
+  &__title {
+    font-size: 60px;
+  }
+  &__title-colored {
+    color: $primary;
+  }
+  &__paragraph {
+    color: lighten($color: $links-inactive, $amount: 15);
+    font-size: 15px;
+    width: 70%;
+    margin-top: 60px;
+  }
+  &__skills {
+    margin-top: 40px;
+  }
+  &__techstack {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    > *:not(:last-child) {
+      margin-right: 40px;
     }
-    &__title-colored{
-        color: $primary;
+  }
+  &__techlogo-container {
+    width: 64px;
+    height: 64px;
+  }
+  &__techlogo {
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: 65%;
+    transition: 0.4s ease-in-out;
+    &:hover {
+      opacity: 100%;
+      filter: none;
     }
-    &__paragraph{
-        color: lighten($color: $links-inactive, $amount: 15);
-        font-size: 15px;
-        width: 70%;
-        margin-top: 60px;
-    }
-    &__skills{
-        margin-top: 40px;
-    }
-    &__techstack{
-        margin-top: 20px;
-        display: flex;
-        >*:not(:last-child){
-            margin-right: 40px;
-        }
-    }
-    &__techlogo-container{
-        width: 64px;
-        height: 64px;
-    }
-    &__techlogo{
-        width: 100%;
-        object-fit: cover;
-        filter: grayscale(100%);
-        opacity: 65%;
-        transition: .4s ease-in-out;
-        &:hover{
-            opacity: 100%;
-            filter: none;
-        }
-    }
+  }
 }
