@@ -57,6 +57,14 @@ const Navigation = () => {
           isMenuOpen ? "navigation__links-visible" : ""
         }`}
       >
+        {windowWidth < 850 && (
+          <FontAwesomeIcon
+            icon={faXmark}
+            size="2xl"
+            className="navigation__menu-Xcross"
+            onClick={handleMenuToggle}
+          />
+        )}
         <Link
           to="/"
           className={
@@ -120,10 +128,9 @@ const Navigation = () => {
       )}
       {windowWidth < 850 && (
         <FontAwesomeIcon
-          icon={isMenuOpen ? faXmark : faBars}
+          icon={faBars}
           size="2xl"
-          style={{ color: "#f5f5f5" }}
-          className="navigation__menu-icon"
+          className="navigation__menu-bars"
           onClick={handleMenuToggle}
         />
       )}

@@ -1,51 +1,71 @@
 @import "../../index.scss";
 
-.workscards{
-    display: block;
-    padding: 15px;
-    width: 366px;
-    height: 395px;
+.workscards {
+  display: block;
+  padding: 15px;
+  width: 366px;
+  height: 395px;
+  border-radius: 30px;
+  background: $gradiant-dark;
+  border: 1px solid $dark;
+  &__cover-container {
+    width: 100%;
+    height: 287px;
     border-radius: 30px;
-    background: $gradiant-dark;
-    border: 1px solid $dark;
-    &__cover-container{
-        width: 100%;
-        height: 287px;
-        border-radius: 30px;
-        overflow: hidden;
+    overflow: hidden;
+  }
+  &__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+  }
+  &__wraper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__title-type {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__type {
+    color: $links-inactive;
+  }
+  &__title {
+    font-size: 24px;
+  }
+  &__arrow {
+    color: $links-inactive;
+    transition: 0.3s ease-in-out;
+  }
+  &:hover &__arrow {
+    color: $white;
+  }
+  &:hover &__cover {
+    transform: scale(1.05);
+  }
+}
+
+@media all and (max-width: 850px) {
+  .workscards {
+    width: 320px;
+    height: 345px;
+    &__cover-container {
+      height: 235px;
     }
-    &__cover{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: .3s ease-in-out;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .workscards {
+    width: calc(100vw - 40px);
+    height: 302px;
+    &__cover-container {
+      height: 200px;
     }
-    &__wraper{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
-    &__title-type{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
-    &__type{
-        color: $links-inactive;
-    }
-    &__title{
-        font-size: 24px;
-    }
-    &__arrow{
-        color: $links-inactive;
-        transition: .3s ease-in-out;
-    }
-    &:hover &__arrow{
-        color: $white;
-    }
-    &:hover &__cover{
-        transform: scale(1.05);
-    }
+  }
 }

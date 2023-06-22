@@ -9,7 +9,9 @@ const Works = () => {
     <>
       <Navigation />
       <main className="works">
-        <h1 className="works__title">Projets OpenClassrooms</h1>
+        <h1 className="works__title">
+          Projets <span className="works__title-colored">OpenClassrooms</span>
+        </h1>
         <section className="works__gallery">
           {projectList.openclassrooms.map(({ id, cover, title, type }) => (
             <div key={id}>

@@ -9,7 +9,9 @@ const Lab = () => {
     <>
       <Navigation />
       <main className="lab">
-        <h1 className="lab__title">Projets personnels</h1>
+        <h1 className="lab__title">
+          Projets <span className="lab__title-colored">personnels</span>
+        </h1>
         <section className="lab__gallery">
           {projectList.laboratory.map(({ id, cover, title, type }) => (
             <div key={id}>
