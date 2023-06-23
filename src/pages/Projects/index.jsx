@@ -3,8 +3,11 @@ import Navigation from "../../components/Navigation";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import projectList from "../../datas/projectList";
 import Footer from "../../components/Footer";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
   let projectId = useParams().id;
@@ -39,7 +42,16 @@ const Projects = () => {
           />
         </div>
         <div className="projects__content">
-          <h1 className="projects__title">{projects.title}</h1>
+          <div className="projects__nav">
+            <Link className="projects__arrow-link" to={"/works"}>
+              <FontAwesomeIcon
+                className="projects__arrow"
+                icon={faArrowLeft}
+                size="2xl"
+              />
+            </Link>
+            <h1 className="projects__title">{projects.title}</h1>
+          </div>
           <div className="projects__content-wrapper">
             <div className="projects__tech projects__container">
               <h2 className="projects__tech-title">Tech</h2>
@@ -57,7 +69,7 @@ const Projects = () => {
             </div>
             <div className="projects__description projects__container">
               <h2 className="projects__description-title">À propos</h2>
-              <p>{projects.description}</p>
+              <p className="projects__description">{projects.description}</p>
             </div>
           </div>
         </div>

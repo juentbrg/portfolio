@@ -30,6 +30,24 @@
     );
     margin-top: 500px;
     padding: 40px;
+    position: relative;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+  &__arrow-link {
+    position: absolute;
+    top: 48px;
+    left: 50px;
+  }
+  &__arrow {
+    color: $links-inactive;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $white;
+    }
   }
   &__title {
     text-align: center;
@@ -113,6 +131,26 @@
     }
     &__techImage-container {
       margin-bottom: 0;
+    }
+    &__arrow-link {
+      top: 45px;
+      left: 25px;
+    }
+    &__arrow {
+      font-size: 24px;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    &__description-title {
+      text-align: center;
+    }
+    &__tech-title,
+    &__description-title {
+      font-size: 18px;
+    }
+    &__description {
+      font-size: 15px;
     }
   }
 }
