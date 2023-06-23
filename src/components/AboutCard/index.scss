@@ -1,90 +1,176 @@
 @import "../../index.scss";
 
-.aboutCard{
-    &__wrapper{
+.aboutCard {
+  &__wrapper {
     display: flex;
     flex-direction: row;
+  }
+  &__picture-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      lighten($color: $dark-background, $amount: 3),
+      lighten($color: $dark-background, $amount: 6)
+    );
+    box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+    width: 370px;
+    height: 370px;
+    border-radius: 30px;
+  }
+  &__picture-container {
+    width: 320px;
+    height: 320px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  &__picture {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  &__content {
+    flex: 1;
+    height: 370px;
+    margin-left: 20px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 60px;
+    margin: 2px 0 8px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: calc(100% - 91px);
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      180deg,
+      lighten($color: $dark-background, $amount: 3),
+      lighten($color: $dark-background, $amount: 6)
+    );
+    box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+  }
+  &__fullName {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  &__description {
+    color: lighten($color: $links-inactive, $amount: 20);
+  }
+  &__more {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  &__following,
+  &__degree {
+    flex: 1;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      180deg,
+      lighten($color: $dark-background, $amount: 3),
+      lighten($color: $dark-background, $amount: 6)
+    );
+    box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+    &:not(:last-child) {
+      margin-right: 20px;
     }
-    &__picture-border{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
-        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
-        width: 370px;
-        height: 370px;
-        border-radius: 30px;
+  }
+  &__following-title,
+  &__degree-title {
+    margin-bottom: 10px;
+  }
+  &__following-description {
+    color: lighten($color: $links-inactive, $amount: 20);
+  }
+  &__degree-info {
+    > *:not(:last-child) {
+      margin-bottom: 5px;
     }
-    &__picture-container{
-        width: 320px;
-        height: 320px;
-        border-radius: 30px;
-        overflow: hidden;
+  }
+  &__degree-date {
+    color: $links-inactive;
+    font-weight: 500;
+  }
+  &__degree-school {
+    color: $links-inactive;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .aboutCard {
+    &__title {
+      font-size: 50px;
+      margin-bottom: 5px;
     }
-    &__picture{
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
+    &__picture-border {
+      width: 270px;
+      height: 270px;
     }
-    &__content{
-        flex: 1;
-        height: 370px;
-        margin-left: 20px;
+    &__picture-container {
+      height: 250px;
+      width: 250px;
     }
-    &__title{
-        text-align: center;
-        font-size: 60px;
-        margin: 2px 0 8px;
+    &__fullName {
+      font-size: 22px;
     }
-    &__info{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 100%;
-        height: calc(100% - 91px);
-        padding: 30px;
-        border-radius: 30px;
-        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
-        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
+    &__content {
+      height: 285px;
     }
-    &__fullName{
-        font-size: 30px;
+    &__info {
+      justify-content: normal;
+      padding: 20px;
+    }
+    &__description,
+    &__following-description {
+      font-size: 15px;
+    }
+    &__more {
+      margin-top: 0;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .aboutCard {
+    padding: 0 10px 0 10px;
+    &__title {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+    &__content {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    &__picture-border {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+    &__picture-container {
+      width: 95%;
+      height: 275px;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    &__more {
+      flex-direction: column;
+    }
+    &__following,
+    &__degree {
+      &:not(:last-child) {
+        margin-right: 0px;
         margin-bottom: 10px;
+      }
     }
-    &__description{
-        color: lighten($color: $links-inactive, $amount: 20);
-    }
-    &__more{
-        display: flex;
-        flex-direction: row;
-        margin-top: 20px;
-    }
-    &__following, &__degree{
-        flex: 1;
-        padding: 30px;
-        border-radius: 30px;
-        background: linear-gradient(180deg, lighten($color: $dark-background, $amount: 3), lighten($color: $dark-background, $amount: 6));
-        box-shadow: rgba(15, 15, 15, 0.6) 0px 2px 8px 0px;
-        &:not(:last-child){
-            margin-right: 20px;
-        }
-    }
-    &__following-title, &__degree-title{
-        margin-bottom: 10px;
-    }
-    &__following-description{
-        color: lighten($color: $links-inactive, $amount: 20);
-    }
-    &__degree-info{
-        > *:not(:last-child) {
-            margin-bottom: 5px;
-        }
-    }
-    &__degree-date{
-        color: $links-inactive;
-        font-weight: 500;
-    }
-    &__degree-school{
-        color: $links-inactive;
-    }
+  }
 }
