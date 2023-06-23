@@ -1,7 +1,7 @@
 import "./index.scss";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo192.webp";
+import { ReactComponent as Logo } from "../../assets/logo192.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -50,7 +50,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <Link className="navigation__logo-container" to="/">
-        <img className="navigation__logo" src={logo} alt="logo julien" />
+        <Logo className="navigation__logo" />
       </Link>
       <div
         className={`navigation__links ${
