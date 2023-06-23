@@ -1,14 +1,24 @@
 import "./index.scss";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const WorksCards = ({ id, cover, title, type }) => {
+const WorksCards = ({ id, cover, title, type, animationDelay }) => {
   const location = useLocation();
   const isLabPage = location.pathname.includes("/laboratory");
+  const cardRef = useRef(null);
+  useEffect(() => {
+    cardRef.current.classList.add("animated");
+  }, []);
   return (
-    <Link to={`/projects/${id}?isLabPage=${isLabPage}`} className="workscards">
+    <Link
+      to={`/projects/${id}?isLabPage=${isLabPage}`}
+      ref={cardRef}
+      className="workscards"
+      style={{ animationDelay: `${animationDelay}s` }}
+    >
       <div className="workscards__cover-container">
         <img className="workscards__cover" src={cover} alt={title} />
       </div>
