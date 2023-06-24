@@ -5,7 +5,7 @@ import projectList from "../../datas/projectList";
 import Footer from "../../components/Footer";
 
 const Works = () => {
-  const delay = 0.15;
+  const delay = 0.2;
   return (
     <>
       <Navigation />

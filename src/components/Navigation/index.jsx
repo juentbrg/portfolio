@@ -49,7 +49,11 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <Link className="navigation__logo-container" to="/">
+      <Link
+        className="navigation__logo-container"
+        to="/"
+        aria-label="Retourner à la page d'accueil"
+      >
         <Logo className="navigation__logo" />
       </Link>
       <div

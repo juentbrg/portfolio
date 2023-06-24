@@ -9,6 +9,9 @@
   padding: 60px 40px;
   &__title {
     font-size: 60px;
+    opacity: 0;
+    animation: toLeft 0.8s ease-in-out forwards;
+    animation-delay: 0.4s;
   }
   &__title-colored {
     color: $primary;
@@ -18,9 +21,17 @@
     font-size: 15px;
     width: 70%;
     margin-top: 60px;
+    opacity: 0;
+    animation: toLeft 0.8s ease-in-out forwards;
+    animation-delay: 0.8s;
   }
   &__skills {
     margin-top: 40px;
+  }
+  &__skills-title {
+    opacity: 0;
+    animation: toLeft 0.8s ease-in-out forwards;
+    animation-delay: 1.2s;
   }
   &__techstack {
     margin-top: 20px;
@@ -33,6 +44,9 @@
   &__techlogo-container {
     width: 64px;
     height: 64px;
+    opacity: 0;
+    animation: toLeft 0.8s ease-in-out forwards;
+    animation-delay: 1.6s;
   }
   &__techlogo {
     width: 100%;
@@ -56,15 +70,21 @@
     margin-bottom: 40px;
     &__title {
       font-size: 50px;
+      animation-delay: 0s;
     }
     &__paragraph {
       width: 100%;
       margin-top: 20px;
       text-align: justify;
+      animation-delay: 0.4s;
+    }
+    &__skills-title {
+      animation-delay: 0.8s;
     }
     &__techlogo-container {
       width: 50px;
       height: 50px;
+      animation-delay: 1.2s;
     }
   }
 }
@@ -75,15 +95,20 @@
     &__title {
       font-size: 35px;
       text-align: center;
+      animation: toBottom 0.8s ease-in-out forwards;
     }
     &__paragraph {
       margin-top: 30px;
+      animation: toBottom 0.8s ease-in-out forwards;
+      animation-delay: 0.4s;
     }
     &__skills {
       text-align: center;
     }
     &__skills-title {
       font-size: 22px;
+      animation: toBottom 0.8s ease-in-out forwards;
+      animation-delay: 0.8s;
     }
     &__techstack {
       justify-content: center;
@@ -91,6 +116,8 @@
     &__techlogo-container {
       width: 40px;
       height: 40px;
+      animation: toBottom 0.8s ease-in-out forwards;
+      animation-delay: 1.2s;
     }
   }
 }
