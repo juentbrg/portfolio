@@ -11,7 +11,6 @@ const usePublicUrl = (file) => {
 };
 
 const Navigation = () => {
-  const [activePage, setActivePage] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
@@ -26,26 +25,29 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    const path = location.pathname;
-    if (path === "/") {
-      setActivePage("home");
-    } else if (path === "/works") {
-      setActivePage("works");
-    } else if (path === "/laboratory") {
-      setActivePage("laboratory");
-    } else if (path === "/about") {
-      setActivePage("about");
-    } else {
-      setActivePage("undefined");
-    }
-  }, [location]);
-
-  useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  const getLinkClassName = (page) => {
+    const isActive = activePage === page;
+    return isActive ? "navigation__link-active" : "navigation__link";
+  };
+
+  let activePage;
+  if (location.pathname === "/") {
+    activePage = "home";
+  } else if (location.pathname === "/works") {
+    activePage = "works";
+  } else if (location.pathname === "/laboratory") {
+    activePage = "laboratory";
+  } else if (location.pathname === "/about") {
+    activePage = "about";
+  } else {
+    activePage = "undefined";
+  }
 
   return (
     <nav className="navigation">
@@ -69,44 +71,16 @@ const Navigation = () => {
             onClick={handleMenuToggle}
           />
         )}
-        <Link
-          to="/"
-          className={
-            activePage === "home"
-              ? "navigation__link-active"
-              : "navigation__link"
-          }
-        >
+        <Link to="/" className={getLinkClassName("home")}>
           Accueil
         </Link>
-        <Link
-          to="/works"
-          className={
-            activePage === "works"
-              ? "navigation__link-active"
-              : "navigation__link"
-          }
-        >
+        <Link to="/works" className={getLinkClassName("works")}>
           Projets
         </Link>
-        <Link
-          to="/laboratory"
-          className={
-            activePage === "laboratory"
-              ? "navigation__link-active"
-              : "navigation__link"
-          }
-        >
+        <Link to="/laboratory" className={getLinkClassName("laboratory")}>
           Laboratoire
         </Link>
-        <Link
-          to="/about"
-          className={
-            activePage === "about"
-              ? "navigation__link-active"
-              : "navigation__link"
-          }
-        >
+        <Link to="/about" className={getLinkClassName("about")}>
           À propos
         </Link>
         {windowWidth < 850 && (
