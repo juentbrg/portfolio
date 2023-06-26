@@ -14,7 +14,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
-  const pdfURL = usePublicUrl("/cv.pdf");
+  const pdfURL = usePublicUrl("portfolio/cv.pdf");
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
