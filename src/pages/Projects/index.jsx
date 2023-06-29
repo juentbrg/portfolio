@@ -43,7 +43,10 @@ const Projects = () => {
         </div>
         <div className="projects__content">
           <div className="projects__nav">
-            <Link className="projects__arrow-link" to={"/works"}>
+            <Link
+              className="projects__arrow-link"
+              to={isLabPage ? "/laboratory" : "/works"}
+            >
               <FontAwesomeIcon
                 className="projects__arrow"
                 icon={faArrowLeft}
