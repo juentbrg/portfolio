@@ -55,6 +55,11 @@
     text-align: center;
     margin-bottom: 40px;
   }
+  &__githubLink {
+    position: absolute;
+    top: 48px;
+    right: 50px;
+  }
   &__content-wrapper {
     display: flex;
     flex-direction: row;
@@ -143,6 +148,10 @@
     }
     &__title {
       font-size: 22px;
+    }
+    &__githubLink {
+      top: 45px;
+      right: 25px;
     }
     &__description-title {
       text-align: center;

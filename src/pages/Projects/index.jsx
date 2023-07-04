@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import projectList from "../../datas/projectList";
 import Footer from "../../components/Footer";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   let projectId = useParams().id;
@@ -54,6 +55,19 @@ const Projects = () => {
               />
             </Link>
             <h1 className="projects__title">{projects.title}</h1>
+            <a
+              href={projects.githubLink}
+              className="projects__githubLink"
+              alt="lien github"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className="projects__githubIcon"
+                icon={faGithub}
+                size="xl"
+              />
+            </a>
           </div>
           <div className="projects__content-wrapper">
             <div className="projects__tech projects__container">
